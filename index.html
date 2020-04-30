@@ -10,11 +10,11 @@
 <body>
 	<div id="terminal"></div>
 
-	<script src="../dist/terminal-1.0.0.min.js"></script>
 	<script>
 	// Convert the 'terminal' DOM element into a live terminal.
 	// This example defines several custom commands for the terminal.
-	var terminal = new Terminal('terminal', {}, {
+	let messageAccueil = 'Welcome to awesome terminale!';
+	var terminal = new Terminal('terminal', {welcome: messageAccueil}, {
 		execute: function(cmd, args) {
 			switch (cmd) {
 				case 'clear':
@@ -22,7 +22,9 @@
 					return '';
 
 				case 'help':
-					return 'Commands: clear, help, theme, ver or version<br>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a>';
+				case 'h':
+				case '?':
+					return terminal.displayHelp();
 
 				case 'theme':
 					if (args && args[0]) {
@@ -32,9 +34,51 @@
 					}
 					return terminal.getTheme();
 
-				case 'ver':
 				case 'version':
 					return '1.0.0';
+
+				case 'ls':
+					var directory = '.';
+					if (args && args.length > 0) {
+						if (args.length > 1) return 'Too many arguments';
+						else directory = args[0];
+					}
+					return terminal.listDirectory(directory);
+
+				case 'll':
+					var directory = '.';
+					if (args && args.length > 0) {
+						if (args.length > 1) return 'Too many arguments';
+						else directory = args[0];
+					}
+					return terminal.llistDirectory(directory);
+
+				case 'cd':
+					var directory = '/';
+					if (args && args.length > 0) {
+						if (args.length > 1) return 'Too many arguments';
+						else directory = args[0];
+					}
+					return terminal.changeDirectory(directory);
+
+				case 'pwd':
+					return terminal.currentDirectory();
+
+				case 'cat':
+					if (!args || args.length <= 0) return 'Too few arguments<br />Usage: cat &lt;file&gt;';
+					else if (args.length > 1) return 'Too many arguments<br />Usage: cat &lt;file&gt;';
+					else return terminal.catFile(args[0]);
+
+				case 'challenge':
+					return "Lost. Perdu. Game.";
+
+				case 'open':
+					if (!args || args.length <= 0) return 'Too few arguments<br />Usage: cat &lt;file&gt;';
+					else if (args.length > 1) return 'Too many arguments<br />Usage: cat &lt;file&gt;';
+					else return terminal.openFile(args[0]);
+
+				case 'about':
+					return 'Inspired by <a href="https://github.com/SDA/terminal" class="external" target="_blank">sasadjolic</a> project';
 
 				default:
 					// Unknown command.
@@ -42,7 +86,7 @@
 			};
 		}
 	});
-	terminal.setPrompt('test');
+	terminal.setPrompt('$');
 	</script>
 </body>
 </html>
