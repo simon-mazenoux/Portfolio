@@ -1,3 +1,54 @@
+@font-face{
+    font-family:'Inconsolata';
+    font-style:normal;
+    font-weight:normal;
+    src:local('Inconsolata'),url('./fonts/inconsolata.woff') format('woff');
+}
+
+html,body{
+    margin:0;
+    height:100%;
+}
+
 html{
-    background-color: aqua;
+    background-color: brown;
+}
+
+header{
+    height: 160px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav{
+    width: 100%;
+    height: calc(100% - 200px);
+    display: flex;
+    align-items: stretch;
+}
+
+nav a{
+    text-decoration: none;
+    color : white;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+nav a h2{
+    text-align: center;
+}
+
+.interface{
+    background-color: purple;
+}
+
+.degrade{
+    background-image: linear-gradient(to right,purple, orange);
+    width: 5%;
+    flex-grow: 0;
+}
+
+.terminal{
+    background-color: coral;
 }
