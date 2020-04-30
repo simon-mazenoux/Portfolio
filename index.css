@@ -33,22 +33,24 @@ nav a{
     color : white;
     flex-grow: 1;
     padding: 20px;
+    width: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 nav a h2{
     text-align: center;
 }
 
-.interface{
-    background-color: purple;
-}
-
-.degrade{
-    background-image: linear-gradient(to right,purple, orange);
-    width: 5%;
-    flex-grow: 0;
-}
 
 .terminal{
-    background-color: coral;
+    background-color: black;
+    background-image: url("./images/terminal.png");
+}
+
+.interface{
+    background-color: #1f253d;
+    background-image: url("./images/interface.png");
+
 }
