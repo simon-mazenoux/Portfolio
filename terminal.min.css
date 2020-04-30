@@ -51,7 +51,7 @@
 .terminal-white .file{color:black;}
 .terminal-white .user{color:#1e4d95;}
 .terminal-white .hostname{color:#d83e3e;}
-.terminal {font-size:2.5vw}
+.terminal {font-size:1.2em}
 .logotext {display:none;}
 @media screen and (min-width: 1100px) {
 .logotext {display:block;}
