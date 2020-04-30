@@ -1,4 +1,4 @@
-@font-face{font-family:'Inconsolata';font-style:normal;font-weight:normal;src:local('Inconsolata'),url('inconsolata.woff') format('woff');}html,body{margin:0;height:100%;}
+@font-face{font-family:'Inconsolata';font-style:normal;font-weight:normal;src:local('Inconsolata'),url('../fonts/inconsolata.woff') format('woff');}html,body{margin:0;height:100%;}
 .terminal ::selection{background:#0080ff;text-shadow:none !important;}
 .terminal{min-height:100%;position:relative;width:100%;}
 .terminal .header{padding:1em 1.5em 1em 1em;position:relative;text-shadow:0 0 2px #C8C8C8;}

@@ -1,8 +1,8 @@
 @font-face{
-    font-family:'Inconsolata';
-    font-style:normal;
-    font-weight:normal;
-    src:local('Inconsolata'),url('./fonts/inconsolata.woff') format('woff');
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: normal;
+    src:local('Inconsolata'),url('./fonts/inconsolata.woff'), format('woff');
 }
 
 html,body{
