@@ -13,8 +13,7 @@
 	<script>
 	// Convert the 'terminal' DOM element into a live terminal.
 	// This example defines several custom commands for the terminal.
-	let messageAccueil = 'Welcome to awesome terminale!';
-	var terminal = new Terminal('terminal', {welcome: messageAccueil}, {
+	var terminal = new Terminal('terminal', {}, {
 		execute: function(cmd, args) {
 			switch (cmd) {
 				case 'clear':
@@ -86,7 +85,6 @@
 			};
 		}
 	});
-	terminal.setPrompt('$');
 	</script>
 </body>
 </html>
