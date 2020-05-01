@@ -8,6 +8,7 @@
 html,body{
     margin:0;
     height:100%;
+    font-family: "Inconsolata";
 }
 
 html{
@@ -46,11 +47,11 @@ nav a h2{
 
 .terminal{
     background-color: black;
-    background-image: url("./images/terminal.png");
+    background-image: url("../images/terminal.png");
 }
 
 .interface{
     background-color: #1f253d;
-    background-image: url("./images/interface.png");
+    background-image: url("../images/interface.png");
 
 }
