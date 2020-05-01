@@ -108,7 +108,7 @@
                 {
                     'name': 'cv',
                     'type':fileType.LINK,
-                    'content':'../cv/cv.pdf',
+                    'content':'../pdf/cv.pdf',
                 },
                 {
                     'name': 'profil.json',
