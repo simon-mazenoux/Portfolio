@@ -65,14 +65,19 @@
                     'type': 'directory',
                     'content': [
                         {
-                            'name':'vjudge',
+                            'name':'codingame',
                             'type':fileType.LINK,
-                            'content':'https://vjudge.net/user/mazenoux2',
-                        },
+                            'content':'https://www.codingame.com/profile/ecb4b61f913f66b95f18295010a49b7b4624083',
+                        }, 
                         {
                             'name':'root-me',
                             'type':fileType.LINK,
                             'content':'https://www.root-me.org/hipoly34?lang=fr',
+                        },
+                        {
+                            'name':'vjudge',
+                            'type':fileType.LINK,
+                            'content':'https://vjudge.net/user/mazenoux2',
                         },
                     ]
                 },
@@ -114,7 +119,7 @@
                     'name': 'profil.json',
                     'type': fileType.FILE,
                     'content': 
-                        `
+                        `<pre>
                         {
                             "prenom": "Simon",
                             "nom": "Mazenoux",
@@ -133,6 +138,7 @@
                                 "pays": "France"
                             }
                         }
+                        </pre>
                     `.replace(/\n/g, '<br />')
                 }
             ]
